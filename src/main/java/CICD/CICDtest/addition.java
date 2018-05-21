@@ -6,6 +6,7 @@ public class addition
     {
         int a = Integer.parseInt(args[0]);
         int b = Integer.parseInt(args[1]);
+        int c = 0;
         System.out.print(add(a, b));
     }
 	
