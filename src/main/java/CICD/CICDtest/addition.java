@@ -8,6 +8,7 @@ public class addition
         int b = Integer.parseInt(args[1]);
         int c = 0;
         System.out.print(add(a, b));
+123
     }
 	
 	public static int add(int a, int b)
