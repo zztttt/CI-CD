@@ -17,7 +17,7 @@ wordladder with CICD
 #### Travis 会列出 Github 上面你的所有仓库，以及你所属于的组织。此时，选择你需要 Travis 帮你构建的仓库，打开仓库旁边的开关。一旦激活了一个仓库，Travis 会监听这个仓库的所有变化。
 ### 3.travis.yml
 #### Travis 要求项目的根目录下面，必须有一个.travis.yml文件。这是配置文件，指定了 Travis 的行为。该文件必须保存在 Github 仓库里面，一旦代码仓库有新的 Commit，Travis 就会去找这个文件，执行里面的命令。
-####主要字段：language、jdk、sudo、before_install
+#### 主要字段：language、jdk、sudo、before_install
 
     language: java  
     jdk: oraclejdk8  

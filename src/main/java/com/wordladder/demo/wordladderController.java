@@ -125,12 +125,12 @@ public class wordladderController {
 		}
 		//in.close();
 		
-		
-		// file path in server is different ????????
+		// file path in server is different ???????? yes
 		//File file = new File("src\\main\\resources\\static\\" +dict_name);
 		
 		// server end path should like this
 		//String path = wordladderController.class.getClass().getClassLoader().getResourceAsStream("/static/"+dict_name);
+		//File file = new File(path);
 		
 		/*
 		String path = Thread.currentThread().getContextClassLoader().getResource("").getPath();
@@ -138,11 +138,8 @@ public class wordladderController {
 		File file = new File(path+"/static/"+dict_name);
 		*/
 		
-		//String path = wordladderController.class.getClass().getClassLoader().getResource("static/"+dict_name).getPath();
-		//System.out.println(path);
-		//File file = new File(path);
-		//BufferedReader reader = new BufferedReader(new FileReader(file));
-		
+		// the code below is useful for server when getting file in a jar package, we can not use primary file path to get  
+		// we should get it by getResourceAsStream and transform it to BufferedReader
 		InputStream in = wordladderController.class.getClassLoader().getResourceAsStream("static/"+dict_name);
 		BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 		try {
